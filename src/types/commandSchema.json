@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CommandRecord",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "description",
+    "syntax",
+    "category",
+    "personas",
+    "shells",
+    "risk",
+    "riskReason",
+    "parameters",
+    "flags",
+    "examples",
+    "tags"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "title": { "type": "string", "minLength": 5 },
+    "description": { "type": "string", "minLength": 10 },
+    "syntax": { "type": "string", "minLength": 2 },
+    "category": {
+      "type": "string",
+      "enum": [
+        "git",
+        "filesystem",
+        "node-pkg",
+        "system-diagnostics",
+        "text-processing",
+        "devops-network",
+        "recipes"
+      ]
+    },
+    "personas": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["beginner", "frontend", "backend", "devops", "data-science"]
+      },
+      "minItems": 1
+    },
+    "shells": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["bash", "zsh", "powershell", "cmd", "git-bash"]
+      },
+      "minItems": 1
+    },
+    "risk": {
+      "type": "string",
+      "enum": ["safe", "read-only", "modifying", "destructive"]
+    },
+    "riskReason": { "type": "string" },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "placeholder", "type", "required", "description"],
+        "properties": {
+          "name": { "type": "string" },
+          "placeholder": { "type": "string" },
+          "type": { "type": "string" },
+          "required": { "type": "boolean" },
+          "defaultValue": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["flag", "description"],
+        "properties": {
+          "flag": { "type": "string" },
+          "alias": { "type": "string" },
+          "description": { "type": "string" },
+          "isDefault": { "type": "boolean" }
+        }
+      }
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["scenario", "command", "expectedOutcome"],
+        "properties": {
+          "scenario": { "type": "string" },
+          "command": { "type": "string" },
+          "expectedOutcome": { "type": "string" }
+        }
+      },
+      "minItems": 1
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "docsUrl": { "type": "string", "format": "uri" }
+  }
+}
