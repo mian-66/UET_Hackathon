@@ -383,3 +383,4 @@ export const textCommands = [
     docsUrl: "https://man7.org/linux/man-pages/man1/tr.1.html"
   }
 ];
+

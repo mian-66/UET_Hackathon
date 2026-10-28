@@ -42,3 +42,4 @@ export function TagBadge({ children, variant = 'default', className = '' }) {
     </span>
   );
 }
+

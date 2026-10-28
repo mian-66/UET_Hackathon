@@ -52,3 +52,4 @@ export function useKeyboardShortcuts({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [searchRef, onClearSearch, onCloseModal, isModalOpen]);
 }
+

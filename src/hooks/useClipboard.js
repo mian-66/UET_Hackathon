@@ -51,3 +51,4 @@ export function useClipboard({ timeout = 2000, enableConfetti = false } = {}) {
 
   return { copy, copiedText, isCopied: Boolean(copiedText) };
 }
+

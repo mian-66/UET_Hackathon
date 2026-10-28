@@ -140,3 +140,4 @@ Contributions are welcomed! Read [CONTRIBUTING.md](CONTRIBUTING.md) to learn how
 ## 📄 License
 
 Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
+

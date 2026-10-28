@@ -68,3 +68,4 @@ export function Header({ totalCommands = 0, onOpenShortcuts }) {
     </header>
   );
 }
+

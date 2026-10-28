@@ -515,3 +515,4 @@ export const gitCommands = [
     docsUrl: "https://git-scm.com/docs/git-revert"
   }
 ];
+

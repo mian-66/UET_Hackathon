@@ -86,3 +86,4 @@ export function useCommandSearch({ favorites = [], history = [] } = {}) {
     hasActiveFilters
   };
 }
+

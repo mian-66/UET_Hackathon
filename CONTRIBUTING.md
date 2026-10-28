@@ -115,3 +115,4 @@ Please classify the `risk` level accurately:
 2. Test your changes locally: `npm run build`
 3. Commit your changes: `git commit -m "feat(commands): add kubectl diagnostic recipes"`
 4. Push to origin and open a Pull Request with a clear description.
+

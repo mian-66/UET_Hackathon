@@ -339,3 +339,4 @@ export const diagnosticCommands = [
     docsUrl: "https://man7.org/linux/man-pages/man1/kill.1.html"
   }
 ];
+

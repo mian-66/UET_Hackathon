@@ -44,3 +44,4 @@ export const RISK_LEVELS = {
 export function getRiskMeta(risk) {
   return RISK_LEVELS[risk] || RISK_LEVELS.safe;
 }
+

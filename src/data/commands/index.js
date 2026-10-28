@@ -52,3 +52,4 @@ export const RISK_FILTERS = [
   { id: 'modifying', label: 'Modifying' },
   { id: 'destructive', label: 'Destructive' },
 ];
+

@@ -59,3 +59,4 @@ export interface CommandRecord {
   aliases: string[];
   docsUrl?: string;
 }
+

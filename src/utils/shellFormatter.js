@@ -23,3 +23,4 @@ export function getCommandForShell(command, shell) {
 
   return command.syntax;
 }
+
